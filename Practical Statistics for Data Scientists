@@ -231,11 +231,58 @@ instead, these are discovered through visual displays
 • The distribution of a sample statistic such as the mean is likely to be more regular and bell-shaped than the distribution of the data itself. The larger the sample the statistic
 is based on, the more this is true. Also, the larger the sample, the narrower the distribution of the sample statistic.
 
-> Link
-    - https://onlinestatbook.com/stat_sim/sampling_dist/
-
 > Central Limit Theorem
 - In probability theory, the central limit theorem (CLT) states that the distribution of a sample variable approximates a normal distribution (i.e., a “bell curve”) as the sample size becomes larger, assuming that all samples are identical in size, and regardless of the population's actual distribution shape.
 
 > Standard Error (maybe - the standard deviation of the sampling distribution of the sample mean)
 - It is called an error because the standard deviation of the sampling distribution tells us how different a sample mean can be expected to be from the true mean.
+- The relationship between standard error and sample size is sometimes referred to as the square root of n rule:
+    to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
+- https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/sampling-distribution-mean/v/standard-error-of-the-mean
+
+> Link
+    - https://onlinestatbook.com/stat_sim/sampling_dist/
+
+> The Bootstrap
+    - The bootstrap can be used for sample size determination; experiment with different values for n to see how the sampling distribution is affected.
+    - https://www.statisticshowto.com/bootstrap-sample/
+
+- Bootstrap sample
+    A sample taken with replacement from an observed data set.\
+
+- Resampling
+    The process of taking repeated samples from observed data; includes both bootstrap and permutation (shuffling) procedures.
+
+- bagging (short for “bootstrap aggregating”)
+    https://en.wikipedia.org/wiki/Bootstrap_aggregating
+
+- Resampling Versus Bootstrapping
+    ~ multiple samples are combined and the sampling may be done without replacement.
+    ~ the term bootstrap always implies sampling with replacement from an observed data set.
+
+- Confidence Intervals
+    The percentage of confidence intervals, constructed in the same way from the same population, that are expected to contain the statistic of interest.
+    - https://www.youtube.com/watch?v=tFWsuO9f74o
+    + For a data scientist, a confidence interval is a tool that can be used to get an idea of how variable a sample result might be. Data scientists would use this information not to publish a scholarly paper or
+        submit a result to a regulatory agency (as a researcher might) but most likely to communicate the potential error in an estimate, and perhaps to learn whether a larger sample is needed.
+
+- Interval endpoints
+    The top and bottom of the confidence interval.
+
+> Normal Distribution
+- The bell-shaped normal distribution is iconic in traditional statistics.
+
+- Error
+    The difference between a data point and a predicted or average value.
+
+- Standardize
+    Subtract the mean and divide by the standard deviation.
+
+- z-score
+    The result of standardizing an individual data point.
+
+- Standard normal
+    A normal distribution with mean = 0 and standard deviation = 1.
+
+- QQ-Plot
+    A plot to visualize how close a sample distribution is to a specified distribution, e.g., the normal distribution.

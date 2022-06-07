@@ -1,0 +1,241 @@
+# CHAPTER 1 - Exploratory Data Analysis
+
+- The terms bit, short for binary digit
+
+> Elements of Structured Data
+- There are two basic types of structured data: numeric and categorical
+
+> Numeric
+- Data that are expressed on a numeric scale.
+    + Continuous
+        - Data that can take on any value in an interval. (Synonyms: interval, float, numeric)
+    + Discrete
+        - Data that can take on only integer values, such as counts. (Synonyms: integer, count)
+
+> Categorical
+- Data that can take on only a specific set of values representing a set of possible categories. (Synonyms: enums, enumerated, factors, nominal)
+    + Binary
+        - A special case of categorical data with just two categories of values, e.g., 0/1, true/false. (Synonyms: dichotomous, logical, indicator, boolean)
+    + Ordinal
+        - Categorical data that has an explicit ordering. (Synonym: ordered factor)
+
++ Link
+    https://whatagraph.com/blog/articles/discrete-vs-continuous-data - Defination
+    https://www.voxco.com/blog/categorical-data-vs-numerical-data/
+
+
+> Rectangular Data
+    - a spreadsheet or database table.
+    - Rectangular data is the general term for a two-dimensional matrix with rows indicating records (cases) and columns indicating features (variables)
+
++ Data frame
+    - Rectangular data (like a spreadsheet) is the basic data structure for statistical and machine learning models.
+
++ Feature
+    - A column within a table is commonly referred to as a feature.
+        Synonyms - attribute, input, predictor, variable
+
++ Outcome
+    - Many data science projects involve predicting an outcome often a yes/no outcome. The features are sometimes used to predict the outcome in an experiment or a study.
+        Synonyms - dependent variable, response, target, output
+
++ Records
+    - A row within a table is commonly referred to as a record.
+        Synonyms - case, example, instance, observation, pattern, sample
+
+
+> Data Frames and Indexes
++ Terminology for rectangular data 
+    - A statistician, predictor variables are used in a model to predict a response or dependent variable.
+    - A data scientist, features are used to predict a target.
+
+> Nonrectangular Data Structures
+- Graph (or network) data structures are used to represent physical, social, and abstract relationships.
+
++ Graphs in Statistics
+    - In computer science and information technology, the term graph typically refers to a depiction of the connections among entities, and to the underlying data structure.
+    - In statistics, graph is used to refer to a variety of plots and visualizations
+
+> Estimates of Location
+- Variables with measured or count data might have thousands of distinct values. A basic step in exploring your data is getting a "typical value" for each feature (variable):
+  an estimate of where most of the data is located (i.e., its central tendency).
+- Statisticians often use the term estimate for a value calculated from the data at hand, Data scientists and business analysts are more likely to refer to such a value as a metric.
+- Mean The sum of all values divided by the number of values. You will encounter the symbol x (pronounced "x-bar")
+    Synonym - average
+- N (or n) refers to the total number of records or observations. In statistics it is capitalized if it is referring to a population, 
+  and lower-case if it refers to a sample from a population. In data science, that distinction is not vital, so you may see it both ways.
+- the mean is much more sensitive to the data, there are many instances in which the median is a better metric for location
+
+- Weighted mean - The sum of all values times a weight divided by the sum of the weights.
+    Synonym - weighted average
+- Median - The value such that one-half of the data lies above and below.
+    Synonym - 50th percentile
+
+• Example - Let's say we want to look at typical household incomes in neighborhoods around Lake Washington in Seattle. 
+        In comparing the Medina neighborhood to the Windermere neighborhood, using the mean would produce very different results because Bill Gates lives in Medina. If we use the
+        median, it won't matter how rich Bill Gates is the position of the middle observation will remain the same.
+
+- Percentile - The value such that P percent of the data lies below.
+                The value such that P percent of the values take on this value or less and (100-P) percent take on this value or more.
+    Synonym - quantile
+
+- Weighted median - The value such that one-half of the sum of the weights lies above and below the sorted data.
+
+- Trimmed mean - The average of all values after dropping a fixed number of extreme values.
+    Synonym - truncated mean
+
+- Robust - Not sensitive to extreme values.
+    Synonym - resistant
+
+- Outlier - A data value that is very different from most of the data.
+    Synonym - extreme value
+
+- When outliers are the result of bad data, the mean will result in a poor estimate of location, while the
+  median will still be valid. In any case, outliers should be identified and are usually worthy of further investigation.
+
+• The basic metric for location is the mean, but it can be sensitive to extreme values (outlier).
+• Other metrics (median, trimmed mean) are less sensitive to outliers and unusual distributions and hence are more robust.
+
+> Estimates of Variability
+- Deviations - The difference between the observed values and the estimate of location.
+    Synonyms - errors, residuals
+
+- Variance - The sum of squared deviations from the mean divided by n - 1 where n is the number of data values.
+    Synonym - mean-squared-error
+
+- Standard deviation - The square root of the variance.
+
+- Mean absolute deviation - The mean of the absolute values of the deviations from the mean.
+    Synonyms - l1-norm, Manhattan norm
+
+- Median absolute deviation from the median
+    The median of the absolute values of the deviations from the median.
+
+- Range
+    The difference between the largest and the smallest value in a data set.
+
+- Order statistics - Metrics based on the data values sorted from smallest to biggest.
+    Synonym - ranks
+
+- Interquartile range - The difference between the 75th percentile and the 25th percentile.
+    Synonym - IQR
+
+> Standard Deviation and Related Estimates
+    - These deviations tell us how dispersed the data is around the central value.
+
+- Degrees of Freedom, and n or n - 1?
+
+> Estimates Based on Percentiles
+- Statistics based on sorted (ranked) data are referred to as order statistics.
+- The most basic measure is the range: the difference between the largest and smallest numbers
+- Note that the median is the same thing as the 50th percentile.
+- The percentile is essentially the same as a quantile, with quantiles indexed by fractions (so the .8 quantile is the same as the 80th percentile).
+
+> Exploring the Data Distribution
+- Boxplot - A plot introduced by Tukey as a quick way to visualize the distribution of data.
+    Synonym - box and whiskers plot
+- Frequency table - A tally of the count of numeric data values that fall into a set of intervals (bins).
+- Histogram - A plot of the frequency table with the bins on the x-axis and the count (or proportion) on the y-axis. While visually similar, bar charts should not be confused
+               with histograms.
+- Density plot - A smoothed version of the histogram, often based on a kernel density estimate.
+
+• In statistical theory, location and variability are referred to as the first and second moments of a distribution. The third and fourth
+moments are called skewness and kurtosis. Skewness refers to whether the data is skewed to larger or smaller values, and kurtosis
+indicates the propensity of the data to have extreme values. Generally, metrics are not used to measure skewness and kurtosis;
+instead, these are discovered through visual displays
+
+> Exploring Binary and Categorical Data
+- Mode - The most commonly occurring category or value in a data set.
+- Expected value - When the categories can be associated with a numeric value, this gives an average value based on a category's probability of occurrence.
+- Bar charts - The frequency or proportion for each category plotted as bars.
+- Pie charts - The frequency or proportion for each category plotted as wedges in a pie.
+
+• Expected Value, Probability, 
+
+> Correlation
+- Correlation coefficient - A metric that measures the extent to which numeric variables are associated with one another (ranges from -1 to +1). 0 indicates no correlation.
+                            Like the mean and standard deviation, the correlation coefficient is sensitive to outliers in the data.
+- Correlation matrix - A table where the variables are shown on both rows and columns, and the cell values are the correlations between the variables.
+- Scatterplot - A plot in which the x-axis is the value of one variable, and the y-axis the value of another.
+
+> Exploring Two or More Variables
+- Familiar estimators like mean and variance look at variables one at a time 
+    (univariate analysis). Correlation analysis is an important method that compares two variables (bivariate analysis). 
+    estimates and plots, and at more than two variables (multivariate analysis).
+- Contingency table - A tally of counts between two or more categorical variables.
+- Hexagonal binning - A plot of two numeric variables with the records binned into hexagons.
+- Contour plot - A plot showing the density of two numeric variables like a topographical map.
+- Violin plot - Similar to a boxplot but showing the density estimate.
+- Heat maps, hexagonal binning, and contour plots all give a visual representation of a two-dimensional density.
+
+
++ Link
+    - https://statistics.laerd.com/statistical-guides/measures-central-tendency-mean-mode-median.php
+    - https://sciencing.com/end-number-mean-7430704.html - For Scientific notation E/e
+    - http://youtube.com/watch?v=s7WTQ0H0Acc - Estimates of Variability - Variance  
+
+
+
+# CHAPTER 2 - Data and Sampling Distributions
+
+> Random Sampling and Sample Bias
+- A sample is a subset of data from a larger data set; statisticians call this larger data set the population.
+- Random sampling is a process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The
+    sample that results is called a simple random sample.
+- Sample - A subset from a larger data set.
+- Population - The larger data set or idea of a data set. 
+- N (n) - The size of the population (sample).
+- Random sampling - Drawing elements into a sample at random.
+- Stratified sampling - Dividing the population into strata and randomly sampling from each strata.
+- Stratum (pl., strata) - A homogeneous subgroup of a population with common characteristics.
+- Simple random sample - The sample that results from random sampling without stratifying the population.
+- Bias - Systematic error. Statistical bias refers to measurement or sampling errors that are systematic and produced by the measurement or sampling process.
+- Sample bias - A sample that misrepresents the population.
+
+• Even in the era of big data, random sampling remains an important arrow in the data scientist's quiver.
+• Bias occurs when measurements or observations are systematically in error because they are not representative of the full population.
+• Data quality is often more important than data quantity, and random sampling can reduce bias and facilitate quality improvement that would otherwise be prohibitively expensive.
+
+> Selection Bias
+- Selection bias is the bias introduced by the selection of individuals, groups, or data for analysis in such a way that proper randomization is not achieved, thereby failing to ensure that the sample obtained is representative of the population intended to be analyzed.[1] It is sometimes referred to as the selection effect. The phrase "selection bias" most often refers to the distortion of a statistical analysis, resulting from the method of collecting samples. If the selection bias is not taken into account, then some conclusions of the study may be false.
+- Selection bias - Bias resulting from the way in which observations are selected.
+- Data snooping - Extensive hunting through data in search of something interesting. 
+    - Data snooping occurs when a given set of data is used  more than once for purposes of inference or model selection.
+    - split rendomly first then Normalize.
+    Alternative names: data dredging, data fishing, p-hacking.
+- Vast search effect - Bias or nonreproducibility resulting from repeated data modeling, or modeling data with large numbers of predictor variables.
+    - A form of selection bias of particular concern to data scientists is what John Elder (founder of Elder Research, a respected data
+    mining consultancy) calls the vast search effect. If you repeatedly run different models and ask different questions with a large data set, 
+    you are bound to find something interesting. But is the result you found truly something interesting, or is it the chance outlier?
+
+> Regression to the Mean
+- Regression to the mean refers to a phenomenon involving successive measurements on a given variable: extreme observations tend to be followed by more central ones.
+- Regression to the mean is a consequence of a particular form of selection bias.
+- Regression to the mean, meaning to “go back,” is distinct from the statistical modeling method of linear regression, in which a linear relationship is estimated between predictor variables and an outcome variable.
+
+> Sampling Distribution of a Statistic
+- 
+- Sample statistic
+    A metric calculated for a sample of data drawn from a larger population.
+- Data distribution
+    The frequency distribution of individual values in a data set.
+- Sampling distribution
+    The frequency distribution of a sample statistic over many samples or resamples.
+- Central limit theorem
+    The tendency of the sampling distribution to take on a normal shape as sample size rises.
+- Standard error
+    The variability (standard deviation) of a sample statistic over many samples (not to be confused with standard deviation, which by itself, refers to variability of individual data values).
+
+• It is important to distinguish between the distribution of the individual data points, known as the data distribution, and the distribution of a sample statistic, known as the sampling distribution.
+
+• The distribution of a sample statistic such as the mean is likely to be more regular and bell-shaped than the distribution of the data itself. The larger the sample the statistic
+is based on, the more this is true. Also, the larger the sample, the narrower the distribution of the sample statistic.
+
+> Link
+    - https://onlinestatbook.com/stat_sim/sampling_dist/
+
+> Central Limit Theorem
+- In probability theory, the central limit theorem (CLT) states that the distribution of a sample variable approximates a normal distribution (i.e., a “bell curve”) as the sample size becomes larger, assuming that all samples are identical in size, and regardless of the population's actual distribution shape.
+
+> Standard Error (maybe - the standard deviation of the sampling distribution of the sample mean)
+- It is called an error because the standard deviation of the sampling distribution tells us how different a sample mean can be expected to be from the true mean.

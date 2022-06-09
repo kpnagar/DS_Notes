@@ -271,6 +271,11 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
 
 > Normal Distribution
 - The bell-shaped normal distribution is iconic in traditional statistics.
+- The normal distribution is also referred to as a Gaussian distribution after Carl Friedrich Gauss, a prodigious German mathematician
+ from the late 18th and early 19th centuries. Another name previously used for the normal distribution was the “error” distribution.
+ Statistically speaking, an error is the difference between an actual value and a statistical estimate like the sample mean.
+ For example, the standard deviation is based on the errors from the mean of the data. Gauss’s
+ development of the normal distribution came from his study of the errors of astronomical measurements that were found to be normally distributed.
 
 - Error
     The difference between a data point and a predicted or average value.
@@ -286,3 +291,16 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
 
 - QQ-Plot
     A plot to visualize how close a sample distribution is to a specified distribution, e.g., the normal distribution.
+
+> Standard Normal and QQ-Plots
+    A standard normal distribution is one in which the units on the x-axis are expressed in terms of standard deviations away from the mean.
+    To compare data to a standard normal distribution, you subtract the mean and then divide by the standard deviation; this is also called normalization or standardization
+    Note that “standardization” in this sense is unrelated to database record standardization (conversion to a common format).
+    The transformed value is termed a z-score, and the normal distribution is sometimes called the z-distribution.
+
+> Long-Tailed Distributions
+- Tail
+    The long narrow portion of a frequency distribution, where relatively extreme values occur at low frequency.
+- Skew
+    Where one tail of a distribution is longer than the other.
+

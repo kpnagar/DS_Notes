@@ -314,10 +314,11 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
 - Degrees of freedom
     A parameter that allows the t-distribution to adjust to different sample sizes, statistics, and numbers of groups.
 
-> Binomial Distribution
-- The binomial distribution is the frequency distribution of the number of successes (x) in a given number of trials (n)
-  with specified probability (p) of success in each trial.
-  https://www.youtube.com/watch?v=gT26Y_VJmOM
+# Binomial Distribution
+    - The binomial distribution is the frequency distribution of the number of successes (x) in a given number of trials (n)
+        with specified probability (p) of success in each trial.
+    - https://www.mathsisfun.com/data/binomial-distribution.html
+    - https://www.youtube.com/watch?v=gT26Y_VJmOM
 
 - Trial
     An event with a discrete outcome (e.g., a coin flip).
@@ -338,3 +339,6 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
     Distribution of number of successes in x trials.
     Synonym - Bernoulli distribution
 
+# Chi-Square Distribution
+
+    - https://www.youtube.com/watch?v=2pKQhCntI6Q

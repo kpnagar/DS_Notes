@@ -301,6 +301,40 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
 > Long-Tailed Distributions
 - Tail
     The long narrow portion of a frequency distribution, where relatively extreme values occur at low frequency.
+
 - Skew
     Where one tail of a distribution is longer than the other.
+
+# Link - https://onlinestatbook.com/2/estimation/t_distribution.html
+
+> Student’s t-Distribution (also called T distribution)
+    - The t-distribution is actually a family of distributions resembling the normal distribution but with thicker tails.
+    - https://www.statisticshowto.com/probability-and-statistics/t-distribution/
+
+- Degrees of freedom
+    A parameter that allows the t-distribution to adjust to different sample sizes, statistics, and numbers of groups.
+
+> Binomial Distribution
+- The binomial distribution is the frequency distribution of the number of successes (x) in a given number of trials (n)
+  with specified probability (p) of success in each trial.
+  https://www.youtube.com/watch?v=gT26Y_VJmOM
+
+- Trial
+    An event with a discrete outcome (e.g., a coin flip).
+
+- Success
+    The outcome of interest for a trial.
+    Synonym - “1” (as opposed to “0”)
+
+- Binomial
+    Having two outcomes.
+    Synonyms - yes/no, 0/1, binary
+
+- Binomial trial
+    A trial with two outcomes.
+    Synonym - Bernoulli trial
+
+- Binomial distribution
+    Distribution of number of successes in x trials.
+    Synonym - Bernoulli distribution
 

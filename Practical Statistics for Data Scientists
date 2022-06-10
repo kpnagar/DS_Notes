@@ -305,7 +305,7 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
 - Skew
     Where one tail of a distribution is longer than the other.
 
-# Link - https://onlinestatbook.com/2/estimation/t_distribution.html
+~ Link - https://onlinestatbook.com/2/estimation/t_distribution.html
 
 > Student’s t-Distribution (also called T distribution)
     - The t-distribution is actually a family of distributions resembling the normal distribution but with thicker tails.
@@ -314,7 +314,7 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
 - Degrees of freedom
     A parameter that allows the t-distribution to adjust to different sample sizes, statistics, and numbers of groups.
 
-# Binomial Distribution
+> Binomial Distribution
     - The binomial distribution is the frequency distribution of the number of successes (x) in a given number of trials (n)
         with specified probability (p) of success in each trial.
     - https://www.mathsisfun.com/data/binomial-distribution.html
@@ -339,6 +339,30 @@ is based on, the more this is true. Also, the larger the sample, the narrower th
     Distribution of number of successes in x trials.
     Synonym - Bernoulli distribution
 
-# Chi-Square Distribution
-
+> Chi-Square Distribution
+    - It is the difference between the observed and expected values, divided by the square root of the expected value, squared, 
+    then summed across all categories.
+    - A low chi-square value for a set of counts indicates that they closely follow the expected distribution. A high chi-square 
+    indicates that they differ markedly from what is expected. There are a variety of chi-square distributions associated with different degrees of freedom (e.g., number of observations
     - https://www.youtube.com/watch?v=2pKQhCntI6Q
+
+> F-Distribution
+    - The F-distribution is used with experiments and linear models involving measured data.
+    - The F-statistic compares variation due to factors of interest to overall variation.
+
+> Poisson and Related Distributions
+    - Lambda
+        The rate (per unit of time or space) at which events occur.
+    - Poisson distribution
+        The frequency distribution of the number of events in sampled units of time or space.
+    - Exponential distribution
+        The frequency distribution of the time or distance from one event to the next event.
+    - Weibull distribution
+        A generalized version of the exponential distribution in which the event rate is allowed to shift over time.
+        Weibull distribution is an extension of the exponential distribution in which the event rate is allowed to change, as specified by a shape parameter, β . If β > 1, the probability of an event increases over time; if β < 1, the probability decreases. 
+        Because the Weibull distribution is used with time-to-failure analysis instead of event rate, the second parameter is expressed in terms of characteristic life, rather than in terms of the rate of events per interval. The symbol used is η , the Greek letter eta. 
+        It is also called the scale parameter.
+
+
+---------------------------------------------------------------------------
+# CHAPTER 3 Statistical Experiments and Significance Testing
